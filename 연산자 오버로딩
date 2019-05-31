@@ -1,0 +1,159 @@
+1. 사각형의 가로 및 세로를 입력 받고 면적을 계산하는 프로그램을 C++의 클래스 기반으로 작성하시오.
+
+#include<iostream>
+
+using namespace std;
+
+ 
+
+class Area{
+
+int a, b;
+
+public:
+
+Area(){
+
+cout<<"두 수를 입력하시오 ";
+
+cin>>a>>b;
+
+}
+
+void pr(){
+
+cout<<"면적은? : "<<a*b;
+
+}
+
+};
+
+ 
+
+int main(){
+
+Area a;
+
+a.pr();
+
+ 
+
+}
+
+ 
+
+2. Add(2,3) 및 Add(2.2, 3.3);이 실행 되도록 함수를 오버로딩 하시오.
+
+#include<iostream>
+
+using namespace std;
+
+ 
+
+//template <class T>
+
+ 
+
+/*T Add(T a,T b){
+
+cout<<a+b<<" ";
+
+}*/
+
+ 
+
+ 
+
+ 
+
+int add(int a,int b){
+
+cout<<a+b<<" ";
+
+}
+
+ 
+
+double add(double a, double b){
+
+cout<<a+b<<" ";
+
+}
+
+ 
+
+ 
+
+int main(){
+
+add(2,3);
+
+add(2.2,3.3);
+
+ 
+
+}
+
+ 
+
+3. 한 지점을 나타내는 (x, y)를 나타내는 클래스 CPnt를 만드시오.
+
+#include<iostream>
+
+using namespace std;
+
+ 
+
+class CPnt{
+
+int x,y;
+
+public:
+
+CPnt(int a=2,int b=3):x(a),y(b){}                  //1) CPnt p1(2,3), p; 생성자를 오버로딩하시오
+
+CPnt Add(CPnt Want_add){                       //3) CPnt P1(2,3), p2(3,4), p; 에서 p=p1.Add(p2);
+
+return CPnt(x+Want_add.x,y+Want_add.y);//가 작동 되도록 코딩하시오.
+
+}
+
+CPnt operator+(CPnt Want_add){                 //4)  CPnt P1(2,3), p2(3,4), p;에서 p = p1+p2; 
+
+return CPnt(x+Want_add.x,y+Want_add.y);//가 실행 되도록 연산자 오버로딩을 하시오.
+
+}
+
+void pr(){
+
+cout<<x<<" "<<y<<endl;                    //2) CPnt P1(2,3); p.Pr()이 2, 3을 출력하도록 하시오
+
+}
+
+};
+
+ 
+
+int main(){
+
+CPnt p1(2,3), p2(3,4), p;
+
+p.pr();
+
+p = p1.Add(p2);
+
+p.pr();
+
+p = p1 + p2;
+
+p.pr();
+
+ 
+
+}
+
+ 
+
+ 
+
+오늘 배운 friend 함수가 인상깊었다. 다음시간에 배울 상속이 기대가 된다
