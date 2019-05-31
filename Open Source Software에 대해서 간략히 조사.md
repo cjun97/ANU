@@ -1,0 +1,71 @@
+Mask R-CNN
+Github 기반의 Open Source Software
+
+  Mask R-CNN은 python 3, keras, TensorFlow로 구현을 하였다.
+Feature Pyramid Network 및 ResNet101 백본을 기반으로 하여 이미지에서 각각의 사물(객체)의 경계 상자 및 마스크를 생성한다. 이 Mask R-CNN은 Faster R-CNN의 확장형이며 훈련하기가 쉽고 처리 속도가 빠르다는 장점이 있다.
+ 마스킹은 Anchor sorting and filtering, Bounding box refinement, mask generation,
+Layer activations, Weight histograms, Logging to Tensorboard, Composing the different pieces 의 순으로 진행이 된다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 이 모델을 확장하거나 사용하는 프로젝트는 교통, 스포츠, 생물학, 의료, 건축, 환경 등 분야를 가리지 않고 사용되고 있으며 대표적으로는 Karol Majek의 4K Video, NUS Control & Mechatronics Lab의 Surgery-Robot-Detection-Segmentation이 있다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=OOT3UIXZztE
+https://github.com/SUYEgit/Surgery-Robot-Detection-Segmentation
+
+
+
+
+
+
+
+
+생각 외로 거대하고 많은 프로젝트들이 오픈소스로 진행되고 있으며 (혹은 완성된 것들이 오픈소스로 풀리거나) 
+그러한 프로젝트들이 또 다른 프로젝트로 응용이 되거나 다른 사람에 의해 개선이 되는 일이 많다는걸 알게 되었다.
+
+ 
+
+그렇다고 해서 오픈소스가 마냥 낯설거나 그러지는 않다. 
+특히 게임을 좋아하는 사람들에게. 게임들 중에서도 유저들에게 부분적으로나마 소스를 개방(주로 툴 등을 배포)하거나 소스를 완전히 개방한 게임들도 존재한다.
+가장 대표적인 게임들이 엘더스크롤 5 : 스카이림, 마인크래프트, 개리모드, 스타크래프트2  이다.
+수많은 사람들이 달려들어 모드들을 개발하고 배포하고 심지어는 모드 자체가 하나의 게임 패키지로 만들어지는 경우가 존재한다.
+또한 게임속에서 게임을 구현한다던지 완전히 다른 게임으로 만드는 일들은 심심찮게 일어나며 이들이 만든 모드들은 대부분이 무료로 공개되어있다.
+오픈소스와 흡사하다고 나는 그렇게 생각한다. (그리고 대부분의 툴들이 JDK나 C/C++를 기반으로한 Lua 언어를 사용하고 있다.) 
